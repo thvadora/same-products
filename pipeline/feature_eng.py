@@ -5,6 +5,6 @@ import yaml
 
 params = yaml.safe_load(open('params.yaml'))['preprocessing']
 
-with open("anduvo.txt", "a") as f:
-    f.write("{}".format(params['split']+3))
+with open("anduvo2.txt", "a") as f:
+    f.write("{}".format(params['seed']+3))
     f.close()

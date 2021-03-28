@@ -8,3 +8,14 @@ stages:
     - preprocessing.split
     outs:
     - anduvo.txt
+  feature_eng:
+    cmd: python pipeline/feature_eng.py
+    deps:
+    - anduvo.txt
+    - pipeline/feature_eng.py
+    params:
+    - feature_eng.min_split
+    - feature_eng.n_est
+    - feature_eng.seed
+    outs:
+    - anduvo2.txt

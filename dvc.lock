@@ -4,13 +4,31 @@ stages:
     cmd: python pipeline/preprocessing.py
     deps:
     - path: pipeline/preprocessing.py
-      md5: 39b52c703f4591a4ed3d031803b6a031
-      size: 215
+      md5: b6b4536ade1988d93eae0d4e98b73f17
+      size: 217
     params:
       params.yaml:
         preprocessing.seed: 20170428
         preprocessing.split: 0.2
     outs:
     - path: anduvo.txt
-      md5: 3d522deaf85577451c01974654b36ad3
+      md5: acff46b161a3b7d6ed01ba79a032acc9
       size: 3
+  feature_eng:
+    cmd: python pipeline/feature_eng.py
+    deps:
+    - path: anduvo.txt
+      md5: acff46b161a3b7d6ed01ba79a032acc9
+      size: 3
+    - path: pipeline/feature_eng.py
+      md5: f4b4ce7bde223f78979bca0e073f4002
+      size: 217
+    params:
+      params.yaml:
+        feature_eng.min_split: 2
+        feature_eng.n_est: 3
+        feature_eng.seed: 4
+    outs:
+    - path: anduvo2.txt
+      md5: b3d90590fb5bc5bfda429ef2655f291f
+      size: 8
