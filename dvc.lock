@@ -1,0 +1,16 @@
+schema: '2.0'
+stages:
+  preprocessing:
+    cmd: python pipeline/preprocessing.py
+    deps:
+    - path: pipeline/preprocessing.py
+      md5: 39b52c703f4591a4ed3d031803b6a031
+      size: 215
+    params:
+      params.yaml:
+        preprocessing.seed: 20170428
+        preprocessing.split: 0.2
+    outs:
+    - path: anduvo.txt
+      md5: 3d522deaf85577451c01974654b36ad3
+      size: 3

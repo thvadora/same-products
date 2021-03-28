@@ -1,0 +1,10 @@
+stages:
+  preprocessing:
+    cmd: python pipeline/preprocessing.py
+    deps:
+    - pipeline/preprocessing.py
+    params:
+    - preprocessing.seed
+    - preprocessing.split
+    outs:
+    - anduvo.txt
