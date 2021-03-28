@@ -27,7 +27,7 @@ stages:
       params.yaml:
         feature_eng.min_split: 2
         feature_eng.n_est: 3
-        feature_eng.seed: 4
+        feature_eng.seed: 30
     outs:
     - path: anduvo2.txt
       md5: b3d90590fb5bc5bfda429ef2655f291f

@@ -4,4 +4,4 @@ preprocessing:
 feature_eng:
   min_split: 2
   n_est: 3
-  seed: 4
+  seed: 30
